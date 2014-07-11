@@ -44,17 +44,21 @@ public class CS101Grade
     /**
      * Compute final grade as the weighted sum of exam, lab, homework scores
      * 
+     * To illustrate the use of the keyword "this" which can be used to make
+     * make reference to the current object, that is, the object whose method 
+     * or constructor is being called
+     * 
      * @param   examScore   Exam score of student
      * @param   labScore    Lab score of student
      * @param   hwScore     Homework score of student
      * @return  Weighted sum of examScore, labScore and hwScore in double type
      */
     public double computeGrade(double examScore, double labScore, double hwScore){
-        examScore = examScore * (examWeight / 100.0);
-        labScore = labScore * (labWeight / 100.0);
-        hwScore = hwScore * (hwWeight / 100.0);
+        this.examScore = examScore * (examWeight / 100.0);
+        this.labScore = labScore * (labWeight / 100.0);
+        this.hwScore = hwScore * (hwWeight / 100.0);
         
-        return examScore + labScore + hwScore;
+        return this.examScore + this.labScore + this.hwScore;
     }
     
     /**
