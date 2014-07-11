@@ -2,32 +2,74 @@
 /**
  * Write a description of class CS101Grade here.
  * 
- * @author (your name) 
+ * @author Chanseok 
  * @version (a version number or a date)
  */
+import comp102x.IO;
+
 public class CS101Grade
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    // static & instance variables
+    private static final int examWeight = 70;
+    private static final int labWeight = 20;
+    private static final int hwWeight = 10;
+    
+    private double examScore;
+    private double labScore;
+    private double hwScore;
+    private double finalGrade;
+    private String studentName;
+    
     /**
-     * Constructor for objects of class CS101Grade
+     * Constructor declaration
      */
-    public CS101Grade()
-    {
-        // initialise instance variables
-        x = 0;
+    public CS101Grade(String name) {
+        studentName = name;
     }
-
+    
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Method getScores obtains all scores for a student
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void getScores(){
+        IO.output("Enter your Exam grade: ");
+        examScore = IO.inputDouble();
+        
+        IO.output("Enter your Lab grade: ");
+        labScore = IO.inputDouble();
+        
+        IO.output("Enter your homework grade: ");
+        hwScore = IO.inputDouble();
+    }
+    
+    /**
+     * Compute final grade as the weighted sum of exam, lab, homework scores
+     * 
+     * @param   examScore   Exam score of student
+     * @param   labScore    Lab score of student
+     * @param   hwScore     Homework score of student
+     * @return  Weighted sum of examScore, labScore and hwScore in double type
+     */
+    public double computeGrade(double examScore, double labScore, double hwScore){
+        examScore = examScore * (examWeight / 100.0);
+        labScore = labScore * (labWeight / 100.0);
+        hwScore = hwScore * (hwWeight / 100.0);
+        
+        return examScore + labScore + hwScore;
+    }
+    
+    /**
+     * Set the finalGrade by calling computeGrade
+     */
+    public void setFinalGrade(){
+        finalGrade = computeGrade(examScore, labScore, hwScore);
+    }
+    
+    /**
+     * Output the final results
+     */
+    public void outputResult(){
+        IO.outputln("For " + studentName + ": examScore = " + examScore +
+                    " labScore = " + labScore + " hwScore = " + hwScore +
+                    " finalGrade = " + finalGrade);
     }
 }
