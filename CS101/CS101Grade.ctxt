@@ -14,4 +14,6 @@ comment3.text=\n\ Set\ the\ finalGrade\ by\ calling\ computeGrade\n
 comment4.params=
 comment4.target=void\ outputResult()
 comment4.text=\n\ Output\ the\ final\ results\n
-numComments=5
+comment5.params=
+comment5.target=void\ test()
+numComments=6

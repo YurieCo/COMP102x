@@ -76,4 +76,9 @@ public class CS101Grade
                     " labScore = " + labScore + " hwScore = " + hwScore +
                     " finalGrade = " + finalGrade);
     }
+    
+    public void test(){
+        IO.outputln(0.1*0.1);
+        IO.outputln(0.01);
+    }
 }
