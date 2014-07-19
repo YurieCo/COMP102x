@@ -54,14 +54,17 @@ public class Player
         char playerChoice;
         boolean result = false;
         
+        // get an input from user
         IO.outputln("Would you want to play game again(y or n)? ");
         playerChoice = IO.inputCharacter();
         
+        // until the input is not correct answer. get answer
         while(playerChoice != 'Y' && playerChoice != 'y' && playerChoice != 'N' && playerChoice != 'n'){
             IO.outputln("Would you want to play game again(y or n)? ");
             playerChoice = IO.inputCharacter();
         }
         
+        // return the appropriate result
         if( playerChoice == 'y' || playerChoice == 'Y') result = true;
         else if ( playerChoice == 'n' || playerChoice == 'N') result = false;
         
