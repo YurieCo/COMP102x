@@ -39,13 +39,27 @@ public class Choice
      */
     public int compareWith(Choice anotherChoice)
     {
-        // write your code after this line
-        
-        
-        
-        
-        
-        
+        int result;
+        // if the type is same as another`s, then result will be 0
+        if(this.type == anotherChoice.getType()) result = 0;
+        else{
+            // if user`s type is rock
+            if(this.type == 0){
+                if(anotherChoice.getType() == 1) result = -1;
+                else result = 1;
+            }
+            // if user`s type is paper
+            else if(this.type == 1){
+                if(anotherChoice.getType() == 2) result = -1;
+                else result = 1;
+            }
+            // if user`s type is scissor
+            else{
+                if(anotherChoice.getType() == 0) result = -1;
+                else result = 1;
+            }
+        }
+        return result;
     }
     
     /**
@@ -58,12 +72,27 @@ public class Choice
      */ 
     public void draw(Canvas canvas, int x, int y, int rotation)
     {
-       // write your code after this line
+       ColorImage choiceImage;
        
+       // find the appropriate image for the type
+       switch(this.type){
+           case 0:
+            choiceImage = new ColorImage("rock.png");
+            break;
+           
+           case 1:
+            choiceImage = new ColorImage("paper.png");
+            break;
+           
+           default:
+            choiceImage = new ColorImage("scissors.png");
+            break;
+       }
        
-       
-       
-       
-       
+       // define image`s position & rotation
+       choiceImage.setX(x);
+       choiceImage.setY(y);
+       choiceImage.setRotation(rotation);
+       canvas.add(choiceImage);
     }
 }

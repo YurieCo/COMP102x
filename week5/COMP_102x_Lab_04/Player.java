@@ -51,12 +51,20 @@ public class Player
      */
     public boolean playAgain()
     {    
-        // write your code after this line
+        char playerChoice;
+        boolean result = false;
         
+        IO.outputln("Would you want to play game again(y or n)? ");
+        playerChoice = IO.inputCharacter();
         
+        while(playerChoice != 'Y' && playerChoice != 'y' && playerChoice != 'N' && playerChoice != 'n'){
+            IO.outputln("Would you want to play game again(y or n)? ");
+            playerChoice = IO.inputCharacter();
+        }
         
+        if( playerChoice == 'y' || playerChoice == 'Y') result = true;
+        else if ( playerChoice == 'n' || playerChoice == 'N') result = false;
         
-        
-
+        return result;
     }
 }

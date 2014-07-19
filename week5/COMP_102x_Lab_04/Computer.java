@@ -15,12 +15,12 @@ public class Computer
      */
     public void makeChoice()
     {
-        // write your code after this line
+        // construct random object and set the Integer in range of 0 to 2s
+        Random randomObject = new Random();
+        int randomInteger = randomObject.nextInt(100) % 3;
         
-        
-        
-        
-        
+        // set computer`s choice to random integer
+        this.choice = new Choice(randomInteger);
     }
     
     /**
