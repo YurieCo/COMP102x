@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=initialBalance\ name\ rate
+comment0.target=SavingsAccount(double,\ java.lang.String,\ double)
+comment0.text=\n\ Constructor\ that\ makes\ use\ of\ the\ constructor\ from\ super\ class\n
+comment1.params=duration
+comment1.target=void\ compoundInterest(int)
+comment1.text=\n\ compund\ interest\ computes\ the\ compound\ interest\ for\ a\ given\ duration\n\ \n\ @param\ duration\ \ the\ number\ of\ times\ the\ interest\ is\ to\ be\ compounded\n
+comment2.params=rate
+comment2.target=void\ setInterestRate(double)
+numComments=3
