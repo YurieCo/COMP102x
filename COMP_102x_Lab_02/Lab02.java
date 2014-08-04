@@ -16,8 +16,6 @@ public class Lab02
         
         result = x * y;
         IO.output("Answer = " + result);
-        
-        
     }
     
     public static void calculateTriangleArea()
