@@ -1,8 +1,20 @@
 #BlueJ class context
 comment0.params=depthImages\ initialStep\ currentStep\ finalStep\ initialScale\ finalScale\ initialX\ finalX\ initialY\ finalY
 comment0.target=comp102x.ColorImage\ generateIntermediateFootballImage(comp102x.ColorImage[],\ int,\ int,\ int,\ double,\ double,\ int,\ int,\ int,\ int)
-comment1.params=goals
-comment1.target=void\ updateGoalPositions(comp102x.assignment.Goal[][])
-comment2.params=highScoreRecords\ name\ level\ score
-comment2.target=comp102x.assignment.GameRecord[]\ updateHighScoreRecords(comp102x.assignment.GameRecord[],\ java.lang.String,\ int,\ int)
-numComments=3
+comment0.text=\r\n\ Method\ for\ generating\ an\ intermediate\ football\ image\ for\ the\ shooting\ animation\r\n\ @param\ \ \ depthImages\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Array\ of\ depthImage\r\n\ @param\ \ \ initialStep\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ First\ step\ of\ the\ animation\r\n\ @param\ \ \ currentStep\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ step\ of\ the\ animation\r\n\ @param\ \ \ finalStep\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Last\ Step\ of\ the\ animation\r\n\ @param\ \ \ initialScale\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Original\ scale\ of\ the\ image\r\n\ @param\ \ \ finalScale\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Final\ scale\ of\ the\ image\r\n\ @param\ \ \ initialX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Initial\ Xposition\ of\ image\r\n\ @param\ \ \ finalX\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Final\ Xposition\ of\ image\r\n\ @param\ \ \ initialY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Initial\ Yposition\ of\ image\r\n\ @param\ \ \ finalY\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Final\ Yposition\ of\ image\r\n\ @return\ \ the\ selected\ depthImage\ \ \ \ \ \r\n
+comment1.params=goals\ currentRow\ currentColumn\ targetRows\ targetCols\ swapMap
+comment1.target=void\ swapGoals(comp102x.assignment.Goal[][],\ int,\ int,\ int[],\ int[],\ int[][])
+comment1.text=\r\n\ Method\ for\ changing\ position\ between\ adjacent\ goals\r\n\ @param\ goals\ \ \ \ \ \ \ \ \ whole\ Goal\ information\r\n\ @param\ currentRow\ \ \ \ current\ goal`s\ Row\ position\r\n\ @param\ currentColumn\ current\ goal`s\ Column\ position\r\n\ @param\ targetRows\ \ \ \ list\ of\ possible\ adjacent\ goal`s\ row\ position\ \r\n\ @param\ targetCols\ \ \ \ list\ of\ possible\ adjacent\ goal`s\ column\ position\r\n\ @param\ swapMap\ \ \ \ \ \ \ handle\ the\ swapmap\ to\ contact\ each\ goal\ just\ once\r\n
+comment2.params=goals
+comment2.target=void\ updateGoalPositions(comp102x.assignment.Goal[][])
+comment2.text=\r\n\ Method\ for\ update\ goalposition\ and\ check\ the\ boundary\ of\ array,\ made\ the\ possible\ move\ position\ list\ of\ each\ goal\r\n\ @param\ goals\ whole\ goal\ information\r\n
+comment3.params=highScoreRecords
+comment3.target=void\ sortingScoreLevelDesc(comp102x.assignment.GameRecord[])
+comment3.text=\r\n\ Method\ for\ sorting\ the\ scoreboard\ using\ bubble\ sort\r\n\ @param\ \ highScoreRecords\ \ \ \ \ contain\ the\ information\ of\ gamescore\ for\ previous\ players\r\n
+comment4.params=highScoreRecords\ currentGameRecord\ mode
+comment4.target=void\ InsertHighScoreRecords(comp102x.assignment.GameRecord[],\ comp102x.assignment.GameRecord,\ int)
+comment4.text=\r\n\ Method\ for\ checking\ the\ condition\ of\ inserting\ current\ player`s\ record\r\n\ @param\ \ \ highScoreRecords\ \ \ \ contain\ the\ information\ of\ gamescore\ for\ previous\ players\r\n\ @param\ \ \ currentGameRecord\ \ \ current\ player`s\ record\r\n\ @param\ \ \ mode\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ the\ variable\ to\ check\ the\ condition\ of\ inserting\ current\ player`s\ record\r\n
+comment5.params=highScoreRecords\ name\ level\ score
+comment5.target=comp102x.assignment.GameRecord[]\ updateHighScoreRecords(comp102x.assignment.GameRecord[],\ java.lang.String,\ int,\ int)
+comment5.text=\r\n\ Method\ for\ update\ the\ current\ player`s\ game\ record\r\n\ @param\ \ \ highScoreRecords\ \ \ \ contain\ the\ information\ of\ gamescore\ for\ previous\ players\r\n\ @param\ \ \ name\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ player`s\ name\r\n\ @param\ \ \ level\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ player`s\ level\r\n\ @param\ \ \ score\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\ player`s\ score\r\n\ @return\ \ GameRecord\ being\ updated\r\n
+numComments=6
